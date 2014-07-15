@@ -3,6 +3,8 @@ require 'ruby-hl7'
 require 'pry'
 
 class HL7Example < Grape::API
+  content_type :txt, 'text/plain'
+
   get '/' do
     # create a message
     msg = HL7::Message.new
