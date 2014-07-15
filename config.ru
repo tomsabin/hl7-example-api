@@ -1,3 +1,3 @@
 $:.unshift "./app"
 require 'api'
-run MyAPI
+run HL7Example
