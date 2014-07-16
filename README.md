@@ -14,7 +14,7 @@ Built with [Grape](https://github.com/intridea/grape)
 - `POST /` with param `msg` will create a HL7::Message object
   - `curl -d 'msg=MSH||||ruby hl7|my office|||||1337' 'http://localhost:9292/'`
 
-##ruby-hl7
+##[ruby-hl7](http://rubydoc.info/gems/ruby-hl7/1.0.3/frames)
 
 - [HL7::Message](http://rubydoc.info/gems/ruby-hl7/1.0.3/HL7/Message)
 - [HL7::Message::Segment](http://rubydoc.info/gems/ruby-hl7/1.0.3/HL7/Message/Segment)
