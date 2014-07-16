@@ -6,19 +6,23 @@ class HL7Example < Grape::API
   content_type :txt, 'text/plain'
 
   get '/' do
-    # create a message
     msg = HL7::Message.new
-    # create a MSH segment for our new message
     msh = HL7::Message::Segment::MSH.new
-    msh.recv_app = 'ruby hl7'
-    msh.recv_facility = 'my office'
-    msh.processing_id = '1337'
-    # add the MSH segment to the message
+      msh.sending_app = 'hl7example'
+      msh.sending_facility = 'a computer'
+      msh.recv_app = 'anonymous'
+      msh.recv_facility = 'the internet'
+      msh.processing_id = '1234'
+      msh.security = '\o/'
     msg << msh
 
-    # msg.to_s # readable version of the message
-    msg.to_hl7 # hl7 version of the message (as a string)
-    # msg.to_mllp # mllp version of the message (as a string)
+    pid = HL7::Message::Segment::PID.new
+      pid.citizenship = 'Chinese'
+      pid.species_code = 'Neophocaena asiaeorientalis ssp. asiaeorientalis'
+      pid.breed_code = 'DOLP'
+    msg << pid
+
+    msg.to_hl7
   end
 
   post '/' do

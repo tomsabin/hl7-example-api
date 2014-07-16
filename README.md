@@ -16,6 +16,7 @@ Built with [Grape](https://github.com/intridea/grape)
 
 ##[ruby-hl7](http://rubydoc.info/gems/ruby-hl7/1.0.3/frames)
 
+- [HL7 Information by Interfaceware](http://www.interfaceware.com/blog/category/hl7-info/)
 - [HL7::Message](http://rubydoc.info/gems/ruby-hl7/1.0.3/HL7/Message)
 - [HL7::Message::Segment](http://rubydoc.info/gems/ruby-hl7/1.0.3/HL7/Message/Segment)
 
