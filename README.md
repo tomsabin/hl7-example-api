@@ -13,6 +13,7 @@ Built with [Grape](https://github.com/intridea/grape)
 
 - `POST /` with param `msg` will create a HL7::Message object
   - `curl -d 'msg=MSH||||ruby hl7|my office|||||1337' 'http://localhost:9292/'`
+  - segments need to be separated by `\r`
 
 ##[ruby-hl7](http://rubydoc.info/gems/ruby-hl7/1.0.3/frames)
 
